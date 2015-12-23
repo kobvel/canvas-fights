@@ -36,6 +36,22 @@
 
     };
 
+    God.explorePosition = function (x, y) {
+        var res = [];
+        var k = 0;
+        for (var i = x - 1; i < x + 2; i++) {
+            for (var j = y - 1; j < y + 2; j++) {
+                if (typeof this.map[i, j] == 'undefined') continue;
+                res[k] = {
+                    x: i,
+                    y: j,
+                    item: this.map[i, j]
+                };
+                k++;
+            }
+        }
+        return res;
+    };
 
 
     /*var map = (function () {
