@@ -16,8 +16,8 @@
 
         for (var i = 0; i < x; i++) {
             for (var j = 0; j < y; j++) {
-                localMap[x] = localMap[x] || [];
-                localMap[x][y] = 0;
+                localMap[i] = localMap[i] || [];
+                localMap[i][j] = 0;
             }
         }
         this.map = localMap;
