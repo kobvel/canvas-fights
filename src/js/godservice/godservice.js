@@ -41,7 +41,7 @@
         var k = 0;
         for (var i = x - 1; i < x + 2; i++) {
             for (var j = y - 1; j < y + 2; j++) {
-                if (typeof this.map[i, j] == 'undefined') continue;
+                if (typeof this.map[i, j] == 'undefined' || (x == i && y == j)) continue;
                 res[k] = {
                     x: i,
                     y: j,
@@ -52,6 +52,18 @@
         }
         return res;
     };
+
+    God.takeGold = function (pers_x, pers_y, targ_x, targ_y) {
+        var res = true;
+        if (Math.abs(pers_x - targ_x) == 1 && Math.abs(pers_y - targ_y) == 1 && this.map[targ_x, targ_y]['type'] === 'gold') {
+            console.log ('Actor took 1pt of gold');
+            this.map[targ_x, targ_y] = 0;
+        } else {
+            console.log ('There are no gold here');
+            res = false;
+        }
+        return res;
+    }
 
 
     /*var map = (function () {
