@@ -22,8 +22,17 @@ gulp.task('styles', function () {
 });
 
 gulp.task('js', function(){
+  console.log(config.app.js)
+
     return gulp.src(config.app.js)
-              .pipe(concat('app.js'))
+              .pipe(concat('main.js'))
+              .pipe(gulp.dest('public'))
+});
+
+
+gulp.task('js_app', function(){
+    return gulp.src(config.app.js_app)
+              .pipe(concat('main.js'))
               .pipe(gulp.dest('public'))
 });
 
