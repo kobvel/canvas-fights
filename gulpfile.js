@@ -42,6 +42,11 @@ gulp.task('vendors-js', function (){
               //.pipe(uglify())
               .pipe(gulp.dest('public'))
 });
+gulp.task('static', function (){
+    return gulp.src('./src/static/**/*.svg')
+              .pipe(gulp.dest('public/static'))
+});
+
 
 gulp.task('watch', ['build'], function () {
   watch(config.app.js, function () {
@@ -59,11 +64,14 @@ gulp.task('watch', ['build'], function () {
   watch(config.app.js, function () {
     gulp.start('js');
   });
+  watch('./src/static/**/*.svg', function () {
+    gulp.start('static');
+  });
 
   watch(config.vendors.js, function () {
     gulp.start('vendors-js');
   })
 })
 
-gulp.task('build', ['index', 'styles', 'js', 'vendors-js']);
+gulp.task('build', ['index', 'styles', 'js', 'static','vendors-js']);
 gulp.task('default', ['build']);
