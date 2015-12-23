@@ -63,7 +63,7 @@
             res = false;
         }
         return res;
-    }
+    };
 
 
     /*var map = (function () {
