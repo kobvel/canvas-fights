@@ -9,7 +9,7 @@
         actionStack: []
     };
 
-    god.createMap = function (width, height, rate) {
+    God.createMap = function (width, height, rate) {
         var localMap = [];
         var x = Math.ceil(height / rate);
         var y = Math.ceil(width / rate);
@@ -24,7 +24,7 @@
         return localMap;
     };
 
-    god.setObject = function (obj, x, y) {
+    God.setObject = function (obj, x, y) {
         var res = true;
         if (map[x][y]) {
             console.log ('The place is reserved');
@@ -34,7 +34,7 @@
         }
         return res;
 
-    }
+    };
 
     /*var map = (function () {
      var instance;
