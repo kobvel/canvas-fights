@@ -26,15 +26,17 @@
 
     God.setObject = function (obj, x, y) {
         var res = true;
-        if (map[x][y]) {
+        if (this.map[x][y]) {
             console.log ('The place is reserved');
             res = false;
         } else {
-            map[x][y] = obj;
+            this.map[x][y] = obj;
         }
         return res;
 
     };
+
+
 
     /*var map = (function () {
      var instance;
