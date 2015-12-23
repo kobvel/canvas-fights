@@ -1,20 +1,22 @@
-
 /**
  * Created by js on 12/23/15.
  */
 (function (window) {
 
     var God = {
-        map: null
+        map: null,
+        day: 0,
+        actionStack: []
     };
 
-    God.CreateMap = function (width, height, rate) {
+    god.createMap = function (width, height, rate) {
         var localMap = [];
-        var x = Math.ceil (height / rate);
-        var y = Math.ceil (width / rate);
+        var x = Math.ceil(height / rate);
+        var y = Math.ceil(width / rate);
 
         for (var i = 0; i < x; i++) {
             for (var j = 0; j < y; j++) {
+                localMap[x] = localMap[x] || [];
                 localMap[x][y] = 0;
             }
         }
@@ -22,23 +24,33 @@
         return localMap;
     };
 
-    /*var map = (function () {
-        var instance;
-
-        function createInstance() {
-            var object = new CreateMap();
-            return object;
+    god.setObject = function (obj, x, y) {
+        var res = true;
+        if (map[x][y]) {
+            console.log ('The place is reserved');
+            res = false;
+        } else {
+            map[x][y] = obj;
         }
+        return res;
 
-        return {
-            getInstance: function () {
-                if (!instance) {
-                    instance = createInstance();
-                }
-                return instance;
-            }
-        };
-    })(window);*/
+    }
+
+    /*var map = (function () {
+     var instance;
+     function createInstance() {
+     var object = new CreateMap();
+     return object;
+     }
+     return {
+     getInstance: function () {
+     if (!instance) {
+     instance = createInstance();
+     }
+     return instance;
+     }
+     };
+     })(window);*/
 
 
     window.God = God;
