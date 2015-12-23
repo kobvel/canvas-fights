@@ -8,7 +8,7 @@ var GulpConfig = (function(){
     };
 
     this.app = {
-      js:     ['./src/js/*.js'],
+      js:     ['./src/js/**/*.js'],
       css:    ['./src/css/*.css'],
       index:  ['./src/index.html']
     };
