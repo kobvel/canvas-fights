@@ -1,0 +1,18 @@
+{
+  "name": "canvas-fights",
+  "description": "JavaScript automated canvas fights game for mentoring program",
+  "main": "index.html",
+  "authors": [
+    "kobvel"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/kobvel/canvas-fights",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
