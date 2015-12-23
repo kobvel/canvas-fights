@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>JS fights</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="vendors.js"></script>
     <script src="main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,8 +24,9 @@
                 <div id="log" class="log"></div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-on bootstrap-switch-id-switch-state bootstrap-switch-animate" style="width: 108px;"><div class="bootstrap-switch-container" style="width: 159px; margin-left: 0px;"><span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 53px;">ON</span><span class="bootstrap-switch-label" style="width: 53px;">&nbsp;</span><span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 53px;">OFF</span><input id="switch-state" type="checkbox" checked=""></div></div>
-                <button type="button" name="button" class="btn btn-default btn-lg next-day-btn">next day</button>
+                <div class="right-control"><input type="checkbox" name="enable" data-size="large" class="next-day-btn" checked></div>
+                
+                <button type="button" name="button" class="btn btn-default btn-lg right-control">next day</button>
             </div>
         </div>
     </div>

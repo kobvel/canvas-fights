@@ -20,3 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
    
     })(window);
 });
+
+$(document).ready(function () {
+   $("[name='enable']").bootstrapSwitch();
+});
