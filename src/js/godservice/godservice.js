@@ -9,10 +9,10 @@
         actionStack: []
     };
 
-    God.createMap = function (width, height, rate) {
+    God.createMap = function (row, col, rate) {
         var localMap = [];
-        var x = Math.ceil(height / rate);
-        var y = Math.ceil(width / rate);
+        var x = Math.ceil(row / rate);
+        var y = Math.ceil(col / rate);
 
         for (var i = 0; i < x; i++) {
             for (var j = 0; j < y; j++) {
