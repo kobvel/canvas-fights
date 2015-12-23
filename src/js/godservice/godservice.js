@@ -56,4 +56,4 @@
 
 
     window.God = God;
-})();
+})(window);
