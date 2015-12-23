@@ -14,10 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     var source = new Image();
                     source.onload = function () { ctx.drawImage(source, i, j, rate, rate); };
                     source.src = 'static/cool-spices.svg';
-                    source.width = rate;
-                    source.height = rate;
-                    console.log(source);
-                    //ctx.drawImage(source, 0, 0);
+           
                 }
             }
         }
